@@ -4,13 +4,13 @@ require "test/unit"
 class TestFizzbuzz < Test::Unit::TestCase
 
   def test_default
-  	fb = Fizzbuzz.new
-  	vals = fb.iterate
+    fb = Fizzbuzz.new
+    vals = fb.iterate
 
-  	#default is 1 to 100 which means 100 values
-  	assert_equal(vals.length, 100)
+    #default is 1 to 100 which means 100 values
+    assert_equal(vals.length, 100)
 
-  	# first value should be 1. note: the array is strings not integers
+    # first value should be 1. note: the array is strings not integers
     assert_equal(vals.first, '1')
     # last value should be buzz
     assert_equal(vals.last, 'buzz')
@@ -31,13 +31,13 @@ class TestFizzbuzz < Test::Unit::TestCase
   end
 
   def test_custom
-  	fb = Fizzbuzz.new
-  	vals = fb.iterate({:end_range=>20, :denominator_fizz=>2, :denominator_buzz=> 5})
+    fb = Fizzbuzz.new
+    vals = fb.iterate({:end_range=>20, :denominator_fizz=>2, :denominator_buzz=> 5})
 
-  	#we set our range to 20
-  	assert_equal(vals.length, 20)
+    #we set our range to 20
+    assert_equal(vals.length, 20)
 
-  	# first value should be 1 (default). note: the array is strings not integers
+    # first value should be 1 (default). note: the array is strings not integers
     assert_equal(vals.first, '1')
     # last value should be fizzbuzz
     assert_equal(vals.last, 'fizzbuzz')
